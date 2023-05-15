@@ -18,7 +18,7 @@ services:
         
     volumes:
       - ..:/SSDV:cached
-      - /Users/mo11/work/SSDV/scRNA_Data:/vol/web/media  #change the @scrna_static_and_media_files to any route for the permenent data storage. If not existing, please create prior deployment
+      - /Desktop/:/vol/web/media  #change the @scrna_static_and_media_files to any route for the permenent data storage. If not existing, please create prior deployment
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
@@ -37,7 +37,7 @@ services:
     image: postgres:13.2
     restart: unless-stopped
     volumes:
-      - /Users/mo11/work/app_development/pddata/data2:/var/lib/postgresql/data
+      - /Desktop/:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
